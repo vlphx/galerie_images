@@ -5,7 +5,7 @@
 - python 3.8
 - flask 
 - flask-mysql
-- Mysql server
+- Avoir un serveur mysql en local
 
 Ouvrez le fichier creerbdd.sql et copier coller la requete pour créer la base de données et les tables.
 Ensuite ouvrez le fichier config.json et remplacez les valeurs par vos informations de connexion à votre serveur MySQL.
