@@ -1,7 +1,7 @@
-#Une application web de partage d’images pour artistes
+# Une application web de partage d’images pour artistes
 
 
-##Requirements: 
+## Requirements: 
 - python 3.8
 - flask 
 - flask-mysql
