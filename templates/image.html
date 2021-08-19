@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block contenu0 %}
+<div class="image_detail">
+    <img class="image_detail_image" src="{{ url_for('affiche_image', nom_du_fichier=nom_du_fichier) }}" alt="{{ nom_du_fichier }}">
+
+    <h1>{{titre}}</h1>
+
+    <p>Posté par <a class="image_detail_artiste" href="{{ url_for('artiste', createur=createur )}}">{{ createur.capitalize() }}</a> {{ date_de_mise_en_ligne.strftime('le %d/%m/%Y à %H:%M:%S') }}.</p>
+
+    <a href="{{ url_for('affiche_formulaire_envoi_image') }}">Acceder au formulaire d'ajout d'images</a>
+
+    <a href="{{ url_for('affiche_catalogue') }}">Acceder à la page d'accueil</a>
+</div>
+{% endblock %}

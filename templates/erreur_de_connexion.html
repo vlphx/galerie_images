@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block contenu %}
+
+<div class="fond_connexion">
+    <p><span>Identifiant ou mot de passe incorrect / compte inexistant</span></p>
+    <div class="connexion_box">
+        <div  class="fermer"><a href="/">+</a></div>
+
+        <div class="connexion_box_without_x">
+
+        <div class="connexion_box_select_liste">
+            <div class="connexion_box_select"><a href="/inscription">Nouveau compte</a></div>
+            <div class="connexion_box_select selected"><a href="#">Connexion</a></div>
+        </div>
+        <form action="/connecter" id="connecter"  method="POST">
+            <div class="connecter_input">
+                <div class="connecter_input_mail">
+                    <div class=""><label >
+                        <input name="pseudonyme" type="text"  value="" placeholder="Pseudonyme" required/></label></div>
+                </div>
+                <div class="connecter_input_mdp">
+                    <div class="" ><label> <input name="mot_de_passe" type="password" value="" placeholder="Mot de passe" required/>
+                    </label></div>
+                </div>
+            </div>
+            <div class="connecter_valider">
+                <!--<div class=""><a>Mot de passe oublié?</a></div>-->
+                <button class="" type="submit" name="Connexion" style="opacity: 1;">Connexion</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

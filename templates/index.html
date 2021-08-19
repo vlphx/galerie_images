@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block contenu0 %}
+
+<section id="catalogue" class="catalogue">
+    <h1>CATALOGUE</h1>
+<div class="galerie">
+    {% for dictionnaire_image in dictionnaires_images %}
+
+    <div class="img" ><a href="{{ url_for('affiche_page_image',
+    nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}" >
+    <img src="{{ url_for('affiche_image', nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}"
+         alt="{{ dictionnaire_image['nom_du_fichier'] }}">
+    </a></div>
+
+    {% endfor %}
+</div>
+
+
+
+    
+</section>
+
+<!--<div class="div_random">-->
+
+<!--<section class="random_images">-->
+    <section id="random" class="catalogue">
+        <h1>IMAGES ALEATOIRES</h1>
+        <div class="galerie">
+{% for dictionnaire_image in dictionnaires_images_random %}
+
+
+    <div class="img" ><div class="img{{ loop.index }}"><a href="{{ url_for('affiche_page_image',
+nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}" >
+    <img class="image"  src="{{ url_for('affiche_image',
+    nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}" alt="{{ dictionnaire_image['nom_du_fichier'] }}">
+    </a></div></div>
+
+
+    {% endfor %}
+
+        </div>
+</section>
+
+
+{% block contenu %}
+{% endblock %}
+
+{% endblock %}

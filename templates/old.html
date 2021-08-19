@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav_logo">
+        <a href="#">logo_img</a>
+        </div>
+        <div class="nav_menu">
+            <ul class="nav_liste">
+                <li class="nav_item"><a href="" class="nav_lien">Catalogue</a></li>
+                <li class="nav_item"><a href="" class="nav_lien">Artistes</a></li>
+                <li class="nav_item"><a href="" class="nav_lien">Ajout d'images</a></li>
+                <!--<li class="nav_item"><a href="" class="nav_lien"><img src="" alt="">user</a>
+                    <ul class="nav_liste_user">
+                        <li class="nav_item"><a href="" class="nav_lien">S'inscrire</a></li>
+                        <li class="nav_item"><a href="" class="nav_lien">Connexion</a></li>
+                    </ul></li>-->
+            </ul>
+        </div>
+        <div id="nav_user">
+            <a href="#" ><img src="user.png" alt=""></a>
+        </div>
+    </nav>
+</header>
+
+<section>random images</section>
+<section>catalogue</section>
+
+<!--Connexion-->
+<div class="fond_connexion">
+        <div class="connexion_box">
+            <div class="fermer">+</div>
+            <div class="connexion_box_select_liste">
+                <div class="connexion_box_select"><a href="#">Nouveau compte</a></div>
+                <div class="connexion_box_select selected"><a href="#">Connexion</a></div>
+            </div>
+            <form action="" id="connecter" style="" method="post">
+                <div class="connecter_input">
+                    <div class="connecter_input_mail">
+                        <div class=""><label>
+                            <input name="email" type="email" autocomplete="email" value="" placeholder="E-mail" required/></label></div>
+                    </div>
+                    <div class="connecter_input_mdp">
+                        <div class=""><label><input name="password" type="password" autocomplete="password" value="" placeholder="Mot de passe" required/>
+                        </label></div>
+                    </div>
+                </div>
+                <div class="connecter_valider">
+                    <!--<div class=""><a>Mot de passe oublié?</a></div>-->
+                    <button class="" type="submit" form="connecter" name="Connexion" style="opacity: 1;">Connexion</button>
+                </div>
+            </form>
+            <form action=" " id="inscription" style="display: none;">
+                <div class="inscription_input">
+                    <div class="inscription_input_mail">
+                        <div class=""><label><input name="email" type="email" autocomplete="new-email" value="" placeholder="E-mail" required/>
+                        </label></div>
+                    </div>
+                    <div class="inscription_input_mdp">
+                        <div class=""><label><input name="password" type="password" autocomplete="new-password" value="" placeholder="Créer un mot de passe" required/>
+                        </label></div>
+                    </div>
+                </div>
+                <div class="inscription_valider"><button class="" type="submit" form="inscription" name="S'inscrire" style="opacity: 1;">S'inscrire</button></div>
+            </form>
+        </div>
+</div>
+<footer></footer>
+<script src="main.js"></script>
+</body>
+</html>

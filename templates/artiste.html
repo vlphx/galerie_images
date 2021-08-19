@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block contenu0 %}
+
+
+<section id="catalogue" class="catalogue">
+    <h1>{{createur}}</h1>
+<div class="galerie">
+    {% for dictionnaire_image in dictionnaires_images %}
+
+    <div class="img" ><a href="{{ url_for('affiche_page_image',
+    nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}" >
+    <img src="{{ url_for('affiche_image', nom_du_fichier=dictionnaire_image['nom_du_fichier']) }}"
+         alt="{{ dictionnaire_image['nom_du_fichier'] }}">
+    </a></div>
+    {% endfor %}
+</div>
+
+</section>
+{% endblock %}

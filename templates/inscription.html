@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block contenu %}
+
+
+
+<div class="fond_connexion">
+    <div class="connexion_box">
+        <div class="fermer"><a href="/">+</a></div>
+        <div class="connexion_box_without_x">
+        <div class="connexion_box_select_liste">
+            <div class="connexion_box_select selected"><a href="#">Nouveau compte</a></div>
+            <div class="connexion_box_select "><a href="/connecter">Connexion</a></div>
+        </div>
+        <form action="/inscription" id="inscription"  method="post">
+            <div class="inscription_input">
+                <div class="inscription_input_mail">
+                    <div class=""><label for="pseudonyme"><input name="pseudonyme" type="text"  value="" placeholder="Pseudonyme" required/>
+                    </label></div>
+                </div>
+                <div class="inscription_input_mdp">
+                    <div class=""><label for="mot_de_passe"><input name="mot_de_passe" type="password"  value="" placeholder="Créer un mot de passe" required/>
+                    </label></div>
+                </div>
+            </div>
+            <div class="inscription_valider"><button class="" type="submit" form="inscription" name="S'inscrire" style="opacity: 1;">S'inscrire</button></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

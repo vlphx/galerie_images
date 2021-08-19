@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block contenu %}
+
+
+<div class="fond_connexion">
+    <p><span>Format de fichier non autorisé</span></p>
+    <div class="connexion_box">
+        <div  class="fermer"><a href="/">+</a></div>
+<div class="envoie_images">
+        <form action="{{ url_for('envoie_image') }}" method="POST" enctype="multipart/form-data">
+
+            <label for="image">Image
+                <input type="file" id="image" name="image_importe" required></label>
+            <label><i>Formats autorisés: png, jpg, jpeg.</i></label>
+            <label for="titre">Titre
+                <input type="text" name="titre" required></label>
+
+            <input type="submit" value="ENVOYER">
+    </form>
+        <label ><a href="/connecter">Retour</a></label>
+</div>
+    </div>
+</div>
+
+{% endblock %}

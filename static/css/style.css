@@ -1,0 +1,474 @@
+:root{
+    --bg_couleur_menu:white;
+    --couleur_menu: black;
+    --bg_couleur_body: #E2E2E2;
+    --couleur:black;
+    --couleur_titre:black;
+    --bg_couleur_outside_user_box:white;
+    --bg_couleur_user_box:aqua;
+    --couleur_user_box:black;
+    --couleur_lien:black;
+    --bg_couleur_select_bar:red;
+    --couleur_alert_message:white;
+
+    --size_h1:4rem;
+    --size_h1_768px:5rem;
+    --size_h1_425px:6rem;
+}
+
+html{
+    overflow-y: scroll;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body:not(header), footer{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg_couleur_body);
+}
+h1{
+    color: var(--couleur_titre);
+    font-size: var(--size_h1);
+}
+
+span{
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+    background-color: var(--couleur);
+    color:var(--bg_couleur_menu);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--couleur);
+    color: var(--bg_couleur_body);
+    padding: 10px;
+    font-family: 'Redressed', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 4;
+    box-shadow: 0 14px 60px -12px rgba(0,0,0,0.65);
+
+}
+header img{
+    color: var(--bg_couleur_body);
+    filter: invert(1);
+}
+footer{
+    width: 100%;
+    background-color: var(--couleur);
+    color: var(--bg_couleur_body);
+    text-align: center;
+    padding: 5px;
+    font-family: 'Redressed', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 1;
+    box-shadow: 0 14px 60px 12px rgba(0,0,0,0.65);
+    position: fixed;
+    bottom: 0;
+
+}
+footer input{
+    background-color: var(--couleur);
+    color: var(--bg_couleur_body);
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    position: relative;
+}
+.nav_logo a{
+    display: inline-grid;
+    margin-bottom: 0;
+    padding: 0;
+
+}
+.nav_menu{
+    display: inline-grid;
+    align-content: center;
+
+}
+.nav_liste{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 100px;
+    list-style-type: none;
+
+    text-align: center;
+
+
+}
+#nav_user img{
+    width: 48px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold
+}
+
+#buttonUp{
+    display: none;
+    position: fixed;
+    bottom: 8%;
+    right: 4%;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    
+}
+#buttonUp img{
+    width: 100%;
+    filter: brightness(0)
+}
+
+#buttonUp img:hover{
+    filter: invert(1);
+
+}
+
+.fond_connexion{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(226, 226, 226, 1);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    align-content: center;
+    justify-content: center;
+    display:grid;
+
+}
+.connexion_box{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--bg_couleur_outside_user_box);
+    text-align: center;
+    position: relative;
+    /* border-radius: 50% / 10%; */
+    border-radius: 5px;
+}
+
+.connexion_box_select {
+    cursor: pointer;
+}
+#ajouterImage{
+    cursor: cell;
+}
+
+.connexion_box_select_liste a{
+    text-decoration: none;
+    color: var(--couleur_lien);
+}
+.connexion_box_select a:hover{
+    position: relative;
+}
+.connexion_box_select a:hover::after{
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 0.2vh;
+    left: 0;
+    top: 1.5rem;
+    border-radius: 5rem;
+    background-color: var(--bg_couleur_select_bar)}
+
+.selected a{position: relative}
+.selected a::after{
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 0.2vh;
+    left: 0;
+    top: 1.5rem;
+    background-color: var(--bg_couleur_select_bar);
+    border-radius: 5rem;
+}
+.fermer {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 270%;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: black;
+}
+.connexion_box_select_liste {
+    justify-content: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.connecter_input, .inscription_input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.connecter_input div, .inscription_input div{
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.connecter_input input, .inscription_input input{
+    padding: 15px;
+}
+.connecter_valider button, .inscription_valider button{
+    color: var(--bg_couleur_menu);
+    background-color: var(--couleur_menu);
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.connexion_box_without_x{
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--bg_couleur_user_box);
+    padding-bottom: 3%;
+    box-shadow: inset 0.3rem 0.3rem 34px #B1B1B1, inset -0.3px -0.3px 34px #FFFFFF;
+    border-radius: 5px;
+}
+.envoie_images label{
+    justify-content: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    margin-bottom: 20px;
+    margin-top: 12%;
+}
+.in_session {
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    margin-top: 12%;
+}
+
+
+.catalogue h1 {
+    text-align: center;
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+}
+#catalogue, #random{
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width:100%;
+    height: 100%;
+}
+#catalogue .galerie, #random .galerie{
+    position: relative;
+    height: auto;
+    margin: auto;
+    padding-bottom: 3rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:2vmin;
+    grid-auto-flow: dense;
+}
+#random .galerie{
+grid-template-columns: auto auto auto;}
+#catalogue .galerie .img, #random .galerie .img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#catalogue .galerie .img:first-child{
+    grid-column-start: span 2;
+    grid-row-start:span 2;
+}
+
+#catalogue .galerie .img:nth-child(2n+3) {
+    grid-row-start: span 1;
+}
+#catalogue .galerie .img:nth-child(4n+5){
+    grid-row-start: span 2;
+    grid-column-start: span 1;
+}
+#catalogue .galerie .img:nth-child(6n+7) {
+    grid-row-start: span 2;
+}
+#catalogue .galerie .img:nth-child(7n+8){
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
+#catalogue .galerie .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(50%) saturate(50%);
+    border:5px solid black;
+}
+#random .galerie .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border:5px solid #d69d9d;
+
+}
+#catalogue .galerie .img:hover img{
+    filter: saturate(100%) grayscale(0%);
+}
+
+#random .galerie .img:first-child{
+    grid-column-start: span 1;
+
+}
+#random .galerie .img:nth-child(2){
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
+
+#random .galerie .img:nth-child(4){
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+}
+
+
+#random .galerie .img:nth-child(9){
+    grid-row-start: span 1;
+    grid-column-start: span 1;
+}
+
+
+div.image_detail{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image_detail img{
+    width: 1000px;
+    height: auto;
+    margin: auto 0 auto 0;
+}
+
+
+
+
+
+
+.image_detail_artiste {
+    background-color: black  !important;
+    color: var(--bg_couleur_body)  !important;
+}
+.image_detail p, .image_detail a  {
+    background-color: var(--bg_couleur_menu);
+    border:1px solid black;
+    padding: 10px;
+    margin: 5px;
+    font-size: large;
+}
+.artistes_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: var(--size_h1);
+}
+.liste_artistes{
+    text-decoration: none;
+    list-style: none;
+    width: 60%;
+    text-align: center;
+    background-color: var(--bg_couleur_body);
+
+}
+
+.liste_artistes li{
+    padding: 1rem;
+}
+.liste_artistes li:nth-child(odd){
+    background-color: black;
+    color: var(--bg_couleur_body);
+}
+
+footer{
+    display: none;
+}
+footer input{
+font-size: larger;
+    border:none;
+    
+}
+
+@media only screen and (max-device-width: 768px) {
+    body h1{
+        font-size: var(--size_h1_768px);
+    }
+    #catalogue .galerie, #random .galerie{
+    grid-template-columns: auto auto auto;
+}
+    #catalogue .galerie .img img{
+        filter: saturate(100%) brightness(100%);
+    }
+    .connexion_box{
+        transform: scale(1.5);
+
+}
+    div.image_detail{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .image_detail img{
+        width: 1000px;
+        height: auto;
+        margin: auto 0 auto 0;
+    }
+
+}
+@media only screen and (max-device-width: 425px){
+    body h1{
+        font-size: var(--size_h1_425px);
+    }
+    #catalogue .galerie, #random .galerie {
+        display: block;
+    }
+    #catalogue .galerie .img, #random .galerie .img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 3% 0 auto auto;
+    }
+    #catalogue .galerie .img img{
+        filter: saturate(100%) brightness(100%);
+    }
+
+    .connexion_box{
+        transform: scale(2);
+    }
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block contenu0 %}
+<section class="artistes_section">
+<ul class="liste_artistes">
+    {% for pseudonyme in dictionnaire_createur %}
+<li><a href="{{ url_for('artiste', createur=pseudonyme['pseudonyme'] )}}">{{ pseudonyme['pseudonyme'] }}</a></li>
+
+
+    {% endfor %}
+</ul>
+</section>
+{% endblock %}
