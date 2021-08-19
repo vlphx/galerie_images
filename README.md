@@ -1,7 +1,7 @@
 Une application web de partage d’images pour artistes
 
 
-Requirements: Avoir python 3, flask, flaskext, et Mysql server installés.
+Requirements: Avoir python 3, flask, flask-mysql et Mysql server installés.
 
 Ouvrez le fichier creerbdd.sql et copier coller la requete pour créer la base de données et les tables.
 Ensuite ouvrez le fichier config.json et remplacez les valeurs par vos informations de connexion à votre serveur MySQL.
